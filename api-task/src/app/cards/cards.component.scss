@@ -6,7 +6,7 @@ mat-card {
     padding: 25px;
     border-radius: 25px;
     height: 460px;
-    transition: all 1.3s;
+    transition: all .3s;
 
     @media screen and (max-width: 992px) {
         max-width: 680px;
