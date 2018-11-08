@@ -14,6 +14,7 @@ The aim was to practice API requests. I chose to work with [SWAPI](https://swapi
 To run the application on your machine:
 1. Clone or download the repository.
 2. Open it in your IDE.
-3. Run `npm i` and then `ng serve --open`.
+3. Run `cd api-task` and `npm i`.
+3. Then run `ng serve --open`.
 
 The app should open in your browser.

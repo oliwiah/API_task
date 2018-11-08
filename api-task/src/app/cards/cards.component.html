@@ -1,43 +1,26 @@
-<mat-card>
+<mat-card *ngIf="(characters$ | async) as character">
   <mat-card-header>
-    <mat-card-title>Character.name</mat-card-title>
-    <mat-card-subtitle>Specie: character.specie</mat-card-subtitle>
+    <mat-card-title>{{ character.name }}</mat-card-title>
+    <mat-card-subtitle *ngFor="let specie of character.species">Specie: {{specie}}</mat-card-subtitle>
   </mat-card-header>
 
   <mat-card-content>
     <mat-list>
-      <mat-list-item>Birth year: character.birth_year</mat-list-item>
+      <mat-list-item>Birth year: {{character.birth_year}}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item>Height: character.height</mat-list-item>
+      <mat-list-item>Height: {{character.height}}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item>Mass: character.mass</mat-list-item>
+      <mat-list-item>Mass: {{character.mass}}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item>Hair color: character.hair_color</mat-list-item>
+      <mat-list-item>Hair color: {{character.hair_color}}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item>Skin color: character.skin_color</mat-list-item>
+      <mat-list-item>Skin color: {{character.skin_color}}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item>Number of vehicles: character.vehicles.length</mat-list-item>
-      <!-- <mat-list-item *ngIf="character.starships.length">
-        Starships:
-        <ul *ngFor="let starship of character.starships">
-          <li>starship.name</li>
-        </ul>
-      </mat-list-item> -->
-      <!-- do usunięcia później -->
-      <!-- <li>
-        Starships:
-        <ul>
-          <li>starship.name</li>
-        </ul>
-      </li> -->
+      <mat-list-item>Number of vehicles: {{character.vehicles.length}}</mat-list-item>
     </mat-list>
   </mat-card-content>
   <mat-card-actions>
-    <!--
-      <button type="button" class="btn btn-outline-secondary w-50" (click)="getPrevPage()">Prev</button>
-      <button type="button" class="btn btn-outline-secondary w-50" (click)="getNextPage()">Next</button>
-    -->
-    <button mat-raised-button>PREV</button>
-    <button mat-raised-button>NEXT</button>
+    <button mat-raised-button (click)="getPrevPage()">PREV</button>
+    <button mat-raised-button (click)="getNextPage()">NEXT</button>
   </mat-card-actions>
 </mat-card>

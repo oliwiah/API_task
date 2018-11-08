@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Character } from 'src/app/character.model';
 import { Observable } from 'rxjs';
 import { CharacterService } from 'src/app/character.service';
@@ -8,22 +8,24 @@ import { CharacterService } from 'src/app/character.service';
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.scss']
 })
-
 export class CardsComponent implements OnInit {
-  @Input() character: Character;
-  characters$: Observable<Character[]>;
+  number = 1;
+  character: Character;
+  characters$: Observable<Character>;
 
-  // constructor(private characterService: CharacterService) {}
+  constructor(private characterService: CharacterService) {}
 
-  // getNextPage(): void {
-  //   this.characters$ = this.characterService.getNextCharacters();
-  // }
+  getNextPage(): void {
+    this.number += 1;
+    this.characters$ = this.characterService.getCharacters(this.number);
+  }
 
-  // getPrevPage(): void {
-  //   this.characters$ = this.characterService.getPrevCharacters();
-  // }
+  getPrevPage(): void {
+    this.number -= 1;
+    this.characters$ = this.characterService.getCharacters(this.number);
+  }
 
   ngOnInit(): void {
-  //   this.getNextPage();
+   this.characters$ = this.characterService.getCharacters(this.number);
   }
 }
