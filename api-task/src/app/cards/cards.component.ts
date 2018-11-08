@@ -16,12 +16,20 @@ export class CardsComponent implements OnInit {
   constructor(private characterService: CharacterService) {}
 
   getNextPage(): void {
-    this.number += 1;
+    if (this.number < 87) {
+      this.number += 1;
+    } else {
+      this.number = 1;
+    }
     this.characters$ = this.characterService.getCharacters(this.number);
   }
 
   getPrevPage(): void {
-    this.number -= 1;
+    if (this.number > 1) {
+      this.number -= 1;
+    } else {
+      this.number = 87;
+    }
     this.characters$ = this.characterService.getCharacters(this.number);
   }
 
