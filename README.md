@@ -20,3 +20,5 @@ To run the application on your machine:
 The app should open in your browser.
 
 Please make sure you have [CORS](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi) extension installed on your browser.
+
+[PREVIEW THE APP](http://api-task.surge.sh/)
