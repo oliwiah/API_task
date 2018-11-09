@@ -6,7 +6,6 @@ export class Character {
     public hair_color: string;
     public skin_color: string;
     public species: string;
-    public vehicles: number;
 
     constructor(
       name: string,
@@ -16,7 +15,6 @@ export class Character {
       hair_color: string,
       skin_color: string,
       species: string,
-      vehicles: number
     ) {
       this.name = name;
       this.birth_year = birth_year;
@@ -25,6 +23,5 @@ export class Character {
       this.hair_color = hair_color;
       this.skin_color = skin_color;
       this.species = species;
-      this.vehicles = vehicles;
     }
   }

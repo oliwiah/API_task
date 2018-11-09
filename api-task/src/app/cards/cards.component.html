@@ -1,22 +1,22 @@
 <mat-card *ngIf="(characters$ | async) as character">
   <mat-card-header>
     <mat-card-title>{{ character.name }}</mat-card-title>
-    <mat-card-subtitle *ngFor="let specie of character.species">Specie: {{specie}}</mat-card-subtitle>
+    <mat-card-subtitle *ngFor="let specie of character.species">Specie: {{ specie.name }}</mat-card-subtitle>
   </mat-card-header>
 
   <mat-card-content>
     <mat-list>
-      <mat-list-item>Birth year: {{character.birth_year}}</mat-list-item>
+      <mat-list-item>Birth year: {{ character.birth_year }}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item>Height: {{character.height}}</mat-list-item>
+      <mat-list-item>Height: {{ character.height }}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item>Mass: {{character.mass}}</mat-list-item>
+      <mat-list-item>Mass: {{ character.mass }}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item>Hair color: {{character.hair_color}}</mat-list-item>
+      <mat-list-item>Hair color: {{ character.hair_color }}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item>Skin color: {{character.skin_color}}</mat-list-item>
+      <mat-list-item>Skin color: {{ character.skin_color }}</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item>Number of vehicles: {{character.vehicles.length}}</mat-list-item>
+      <mat-list-item>Number of vehicles: {{ character.vehicles.length }}</mat-list-item>
     </mat-list>
   </mat-card-content>
   <mat-card-actions>
