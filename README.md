@@ -17,7 +17,7 @@ To run the application on your machine:
 3. Run `cd api-task` and `npm i`.
 3. Then run `ng serve --open`.
 
-The app should open in your browser.
+The app should open in your browser and you can use left and right keyboard arrows to switch through the characters.
 
 Please make sure you have [CORS](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi) extension installed on your browser.
 
