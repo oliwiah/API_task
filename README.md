@@ -6,7 +6,6 @@ The aim was to practice API requests. I chose to work with [SWAPI](https://swapi
 * Angular Material
 * SCSS
 * Ajax / Fetch API
-* Lodash
 * RxJS
 * Surge
 
